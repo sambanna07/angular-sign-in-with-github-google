@@ -1,0 +1,28 @@
+<!-- Add Bootstrap CSS -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-header text-center">
+          <h2>Welcome, {{ name }}!</h2>
+        </div>
+        <div class="card-body text-center">
+          <img [src]="picture" class="rounded-circle mb-3" alt="Profile Picture" width="150" height="150" [alt]="userProfile">
+
+          <h5>Email: {{ email }}</h5>
+          <p *ngIf="emailVerified" class="text-success">Email Verified</p>
+          <p *ngIf="!emailVerified" class="text-danger">Email Not Verified</p>
+          <button class="btn btn-primary mt-3" (click)="signOut()">Sign Out</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Add Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
